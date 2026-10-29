@@ -290,3 +290,5 @@ ul,ol{margin:0;padding:0;list-style:none}
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none}
 }
+.sitemap .port-col a{transition:color .3s}
+.sitemap .port-col a:hover{color:var(--gold-d)}

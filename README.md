@@ -15,16 +15,20 @@ A fast static site: plain HTML, one CSS file, one small script, self-hosted font
 | `/contact` | `contact.html` |
 | not found | `404.html` |
 
-## Deploy on Cloudflare Pages
+## Deployment
 
-1. In Cloudflare, open **Workers & Pages → Create → Pages → Connect to Git** and choose this repository.
-2. Build settings: **Framework preset: None**, **Build command: empty**, **Build output directory: `/`**.
-3. Deploy. Cloudflare serves `/about` from `about.html` automatically.
-4. Open the project's **Custom domains** tab, add `erssc.com` and `www.erssc.com`, and accept the DNS records Cloudflare proposes.
+The site is hosted on Cloudflare Pages in the project **erssc**, at https://erssc.com and https://www.erssc.com.
 
-Every push to `main` redeploys the site automatically.
+Every push to `main` publishes the site through the GitHub Action in `.github/workflows/deploy.yml`. It needs two repository secrets, set under **Settings → Secrets and variables → Actions**:
 
-`_headers` sets security headers and long-term caching for images and fonts.
+| Secret | Value |
+|---|---|
+| `CLOUDFLARE_API_TOKEN` | A Cloudflare API token with **Account → Cloudflare Pages → Edit** |
+| `CLOUDFLARE_ACCOUNT_ID` | `7b5d2244f40a1473ea569370213d0d9e` |
+
+You can also run it by hand from the **Actions** tab (**Deploy to Cloudflare Pages → Run workflow**).
+
+`_headers` sets security headers and long-term caching for images and fonts. `sitemap.xml` is the search-engine site map, and `/sitemap` is the visible site-map page.
 
 ## Editing content
 
