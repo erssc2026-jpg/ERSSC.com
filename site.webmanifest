@@ -1,0 +1,20 @@
+{
+  "name": "ERSSC \u2014 Engineering Root Solution Saudi Company",
+  "short_name": "ERSSC",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1A30",
+  "theme_color": "#0B1A30",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
